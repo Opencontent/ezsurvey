@@ -48,9 +48,9 @@ var isSurveySubmitted = false;
 
 {"Questions marked with %mark% are required."|i18n('survey', '', hash( '%mark%', '<strong class="required">*</strong>' ) )}
 
-{section show=$preview|not}
+{*section show=$preview|not*}
 {include uri="design:survey/view_validation.tpl"}
-{/section}
+{*/section*}
 
 {let question_results=$survey.question_results}
 {section show=$question_results}
