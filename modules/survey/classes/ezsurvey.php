@@ -330,7 +330,9 @@ class eZSurvey extends eZPersistentObject
                          ezcontentobject_attribute.language_code as contentobjattr_language_code,
                          ezcontentobject.name,
                          ezsurvey.*";
+        $groupByQueries['var'] = '';
         $selectQueries['count'] = "count(ezcontentobject.id) AS count";
+        $groupByQueries['count'] = ' GROUP BY ezcontentobject.id ';
         $db = eZDB::instance();
         foreach ( $selectQueries as $key => $var  )
         {
@@ -340,7 +342,8 @@ class eZSurvey extends eZPersistentObject
                         ezsurvey.id=ezcontentobject_attribute.data_int AND
                         ezcontentobject_attribute.contentobject_id=ezcontentobject.id AND
                         ezcontentobject.current_version=ezcontentobject_attribute.version AND
-                        ezcontentobject.status=" . eZContentObject::STATUS_PUBLISHED . "
+                        ezcontentobject.status=" . eZContentObject::STATUS_PUBLISHED .
+                  $groupByQueries[$key] . "
                   ORDER BY ezcontentobject.id DESC, ezcontentobject.current_version DESC";
 
             if ( $key == 'var' )
