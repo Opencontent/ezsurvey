@@ -191,7 +191,8 @@ class eZSurvey extends eZPersistentObject
                        'survey_id=ezsurvey.id AND ' .
                        'ezsurvey.contentobject_id=\'' . $contentobjectID . '\' AND ' .
                        'ezsurvey.contentclassattribute_id=\'' . $contentClassAttributeID . '\' AND ' .
-                       'ezsurvey.language_code=\'' . $languageCode . '\'' . $userSelect;
+                       'ezsurvey.language_code=\'' . $languageCode . '\'' . $userSelect .
+                       'GROUP BY ezsurveyresult.id';
 
         $rows = $db->arrayQuery( $sql );
         $count = $rows[0]['count'];
