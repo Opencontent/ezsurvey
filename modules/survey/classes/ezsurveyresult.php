@@ -295,7 +295,7 @@ class eZSurveyResult extends eZPersistentObject
                          ezsurveyresult.survey_id=ezsurvey.id AND
                          contentclassattribute_id='" . $contentClassAttributeID . "' AND
                          contentobject_id='" . $contentObjectID . "' AND
-                         language_code='" . $languageCode . "' ORDER BY ezsurveyresult.tstamp DESC";
+                         language_code='" . $languageCode . "' GROUP BY ezsurveyresult.id ORDER BY ezsurveyresult.tstamp DESC";
         $countArray = $db->arrayQuery( $queryCount );
         $count = $countArray[0]['count'];
         if ( is_array(  $resultList ) and count( $resultList ) > 0 )
