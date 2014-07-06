@@ -312,7 +312,7 @@
     </message>
     <message>
         <source>Paragraph</source>
-        <translation type="unfinished">Pararafo</translation>
+        <translation type="unfinished">Paragrafo</translation>
     </message>
     <message>
         <source>Receiver</source>
