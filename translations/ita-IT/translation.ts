@@ -744,7 +744,7 @@
     </message>
     <message>
         <source>Single/Multiple Choice</source>
-        <translation type="unfinished">Scelta sngola/multipla</translation>
+        <translation type="unfinished">Scelta singola/multipla</translation>
     </message>
     <message>
         <source>Entered text in the question %number is not an integer number!</source>
