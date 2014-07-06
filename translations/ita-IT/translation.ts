@@ -124,7 +124,7 @@
     </message>
     <message>
         <source>Survey</source>
-        <translation type="unfinished">Questionari</translation>
+        <translation type="unfinished">Questionario</translation>
     </message>
     <message>
         <source>Enabled</source>
