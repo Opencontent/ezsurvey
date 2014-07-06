@@ -348,7 +348,7 @@
     </message>
     <message>
         <source>Enter the button &apos;Add existing&apos; or &apos;Add new&apos; to create a new related object to the survey.</source>
-        <translation type="unfinished">Clicca su &quot;Aggiungi esistente&quot; o &quot;Aggiungi nuovo&quot; per aggiungere un oggetto correlato al questionario</translation>
+        <translation type="unfinished">Clicca su &quot;Cerca&quot; o &quot;Aggiungi nuovo&quot; per aggiungere un oggetto correlato al questionario</translation>
     </message>
     <message>
         <source>Section header</source>
