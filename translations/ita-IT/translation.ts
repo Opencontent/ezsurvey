@@ -504,7 +504,7 @@
     </message>
     <message>
         <source>Browse</source>
-        <translation type="unfinished">Cerca nodo</translation>
+        <translation type="unfinished">Cerca</translation>
     </message>
     <message>
         <source>Browse for the parent node for the related survey attributes.</source>
