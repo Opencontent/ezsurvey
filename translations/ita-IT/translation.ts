@@ -824,7 +824,7 @@
     </message>
     <message>
         <source>Feedback field entry</source>
-        <translation type="unfinished">Feedback</translation>
+        <translation type="unfinished">Invia risposte a</translation>
     </message>
     <message>
         <source>Send copy in bcc to admin (%1)</source>
@@ -840,7 +840,7 @@
     </message>
     <message>
         <source>Text of subject</source>
-        <translation type="unfinished">Testo della mail</translation>
+        <translation type="unfinished">Titolo della mail</translation>
     </message>
     <message>
         <source>Feedback message for the receiver</source>
