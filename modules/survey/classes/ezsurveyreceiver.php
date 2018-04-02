@@ -9,10 +9,10 @@
 
 class eZSurveyReceiver extends eZSurveyQuestion
 {
-    function eZSurveyReceiver( $row = false )
+    function __construct( $row = false )
     {
         $row['type'] = 'Receiver';
-        $this->eZSurveyQuestion( $row );
+        parent::__construct( $row );
         $this->decodeXMLOptions();
     }
 

@@ -9,7 +9,7 @@
 
 class eZSurveyTextEntry extends eZSurveyEntry
 {
-    function eZSurveyTextEntry( $row = false )
+    function __construct( $row = false )
     {
         if ( !isset( $row['num'] ) )
             $row['num'] = 70;
@@ -18,7 +18,7 @@ class eZSurveyTextEntry extends eZSurveyEntry
         if ( !isset( $row['mandatory'] ) )
             $row['mandatory'] = 1;
         $row['type'] = 'TextEntry';
-        $this->eZSurveyEntry( $row );
+        parent::__construct( $row );
     }
 
     static function definition()

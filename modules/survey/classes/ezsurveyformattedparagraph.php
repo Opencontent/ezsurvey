@@ -9,10 +9,10 @@
 
 class eZSurveyFormattedParagraph extends eZSurveyQuestion
 {
-    function eZSurveyFormattedParagraph( $row = false )
+    function __construct( $row = false )
     {
         $row['type'] = 'FormattedParagraph';
-        $this->eZSurveyQuestion( $row );
+        parent::__construct( $row );
     }
 
     /*!

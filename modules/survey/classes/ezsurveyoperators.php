@@ -9,7 +9,7 @@
 
 class eZSurveyOperators
 {
-    function eZSurveyOperators()
+    function __construct()
     {
         $this->Operators = array( 'number' );
     }

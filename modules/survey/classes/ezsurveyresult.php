@@ -9,9 +9,9 @@
 
 class eZSurveyResult extends eZPersistentObject
 {
-    function eZSurveyResult( $row = array(), $metaData = null )
+    function __construct( $row = array(), $metaData = null )
     {
-        $this->eZPersistentObject( $row );
+        parent::__construct( $row );
         if ( $metaData == false )
         {
             $this->MetaData = null;

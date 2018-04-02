@@ -9,12 +9,12 @@
 
 class eZSurveyEmailEntry extends eZSurveyEntry
 {
-    function eZSurveyEmailEntry( $row = false )
+    function __construct( $row = false )
     {
         if ( !isset( $row['mandatory'] ) )
             $row['mandatory'] = 1;
         $row['type'] = 'EmailEntry';
-        $this->eZSurveyEntry( $row );
+        parent::__construct( $row );
     }
 
     function processViewActions( &$validation, $params )

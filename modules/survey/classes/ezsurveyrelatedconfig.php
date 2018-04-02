@@ -12,9 +12,9 @@ class eZSurveyRelatedConfig extends eZPersistentObject
     /*!
      Constructor
     */
-    function eZSurveyRelatedConfig( $row = array() )
+    function __construct( $row = array() )
     {
-        $this->eZPersistentObject( $row );
+        parent::__construct( $row );
     }
 
     /*!

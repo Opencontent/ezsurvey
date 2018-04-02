@@ -21,7 +21,7 @@ class eZSurveyFeedbackField extends eZSurveyEntry
         if ( !isset( $row['num'] ) )
             $row['num'] = 1; // default value for bcc
 
-        $this->eZSurveyEntry( $row );
+        parent::__construct( $row );
     }
 
     static function definition()

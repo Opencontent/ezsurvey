@@ -9,12 +9,12 @@
 
 class eZSurveyNumberEntry extends eZSurveyEntry
 {
-    function eZSurveyNumberEntry( $row = false )
+    function __construct( $row = false )
     {
         if ( !isset( $row['mandatory'] ) )
             $row['mandatory'] = 1;
         $row['type'] = 'NumberEntry';
-        $this->eZSurveyEntry( $row );
+        parent::__construct( $row );
     }
 
     function processViewActions( &$validation, $params )

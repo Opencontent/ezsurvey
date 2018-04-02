@@ -9,10 +9,10 @@
 
 class eZSurveyParagraph extends eZSurveyQuestion
 {
-    function eZSurveyParagraph( $row = false )
+    function __construct( $row = false )
     {
         $row['type'] = 'Paragraph';
-        $this->eZSurveyQuestion( $row );
+        parent::__construct( $row );
     }
 
     function canAnswer()
