@@ -21,13 +21,22 @@ class eZSurveyQuestion extends eZPersistentObject
     private static $currentUserObject;
     private static $survey;
 
-    function eZSurveyQuestion( $row = array() )
+    function __construct( $row = array() )
     {
         $type = $row['type'];
         if ( $type )
             $GLOBALS['eZSurveyQuestionTypes'][$type]['count']++;
         $this->Answer = false;
-        $this->eZPersistentObject( $row );
+        parent::__construct( $row );
+    }
+
+    /**
+     * @deprecated Use eZSurveyQuestion::__construct() instead
+     * @param int|array $row
+     */
+    function eZSurveyQuestion($row)
+    {
+        self::__construct( $row );
     }
 
     function remove( $conditions = null, $extraConditions = null )

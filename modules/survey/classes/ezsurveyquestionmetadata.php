@@ -12,9 +12,9 @@ class eZSurveyQuestionMetaData extends eZPersistentObject
     /*!
      Constructor
     */
-    function eZSurveyQuestionMetaData( $row = array() )
+    function __construct( $row = array() )
     {
-        $this->eZPersistentObject( $row );
+        parent::__construct( $row );
     }
 
     static function definition()

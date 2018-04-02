@@ -28,10 +28,10 @@ class eZSurveyMultipleChoice extends eZSurveyQuestion
         return $value;
     }
 
-    function eZSurveyMultipleChoice( $row = false )
+    function __construct( $row = false )
     {
         $row['type'] = 'MultipleChoice';
-        $this->eZSurveyQuestion( $row );
+        parent::__construct( $row );
         $this->decodeXMLOptions();
     }
 

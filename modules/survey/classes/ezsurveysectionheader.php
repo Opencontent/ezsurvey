@@ -12,10 +12,10 @@ class eZSurveySectionHeader extends eZSurveyQuestion
     /*!
       Constructor of the survey.
     */
-    function eZSurveySectionHeader( $row = false )
+    function __construct( $row = false )
     {
         $row['type'] = 'SectionHeader';
-        $this->eZSurveyQuestion( $row );
+        parent::__construct( $row );
     }
 
     /*!

@@ -23,9 +23,9 @@ class eZSurveyType extends eZDataType
     /*!
      Constructor
     */
-    function eZSurveyType()
+    function __construct()
     {
-        $this->eZDataType( self::DATA_TYPE_STRING, ezpI18n::tr( 'ezsurvey/datatypes', 'Survey', 'Datatype name' ) );
+        parent::__construct( self::DATA_TYPE_STRING, ezpI18n::tr( 'ezsurvey/datatypes', 'Survey', 'Datatype name' ) );
     }
 
     /*!

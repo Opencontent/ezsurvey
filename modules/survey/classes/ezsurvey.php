@@ -13,13 +13,13 @@ class eZSurvey extends eZPersistentObject
 {
     public static $surveyContent;
 
-    function eZSurvey( $row = array() )
+    function __construct( $row = array() )
     {
         if ( !isset( $row['valid_from' ] ) )
             $row['valid_from'] = -time();
         if ( !isset( $row['valid_to' ] ) )
             $row['valid_to'] = -time();
-        $this->eZPersistentObject( $row );
+        parent::__construct( $row );
         $this->QuestionList = null;
     }
 

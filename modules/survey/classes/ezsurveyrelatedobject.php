@@ -12,10 +12,10 @@ class eZSurveyRelatedObject extends eZSurveyQuestion
     /*!
      Constructor
     */
-    function eZSurveyRelatedObject( $row = false )
+    function __construct( $row = false )
     {
         $row['type'] = 'RelatedObject';
-        $this->eZSurveyQuestion( $row );
+        parent::__construct( $row );
 
         $surveyID = $this->attribute( 'survey_id' );
         $survey = eZSurvey::fetch( $surveyID );

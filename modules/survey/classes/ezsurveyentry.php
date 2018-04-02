@@ -9,9 +9,18 @@
 
 class eZSurveyEntry extends eZSurveyQuestion
 {
-    function eZSurveyEntry( $row = false )
+    function __construct( $row = false )
     {
-        $this->eZSurveyQuestion( $row );
+        parent::__construct( $row );
+    }
+
+    /**
+     * @deprecated Use eZSurveyEntry::__construct() instead
+     * @param int|array $row
+     */
+    function eZSurveyEntry($row)
+    {
+        self::__construct( $row );
     }
 
     function processViewActions( &$validation, $params )
